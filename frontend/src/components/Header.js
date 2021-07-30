@@ -38,7 +38,7 @@ const Header = () => {
             <Navbar.Brand>
               <Image
                 className="logo"
-                src="https://res.cloudinary.com/magwatt/image/upload/v1623513426/AmyRush_fckowm.png"
+                src="https://res.cloudinary.com/magwatt/image/upload/v1627661847/DIMS_pda2uq.png"
               />
             </Navbar.Brand>
           </LinkContainer>
