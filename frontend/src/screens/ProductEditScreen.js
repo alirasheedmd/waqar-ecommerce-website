@@ -133,7 +133,7 @@ const ProductEditScreen = ({ match, history }) => {
               ></Form.Control>
             </Form.Group>
             <Form.Group controlid="category">
-              <Form.Label>category</Form.Label>
+              <Form.Label>Category</Form.Label>
               <Form.Control
                 type="text"
                 value={category}
