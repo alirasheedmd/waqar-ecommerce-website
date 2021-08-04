@@ -1,12 +1,59 @@
 import React from "react"
 import { Container, Image } from "react-bootstrap"
 import { Link } from "react-router-dom"
+import image from "../images/secure.svg"
 
 const Footer = () => {
   return (
     <div id="footer">
       <footer id="large-screen">
-        <Container className="body section-padding">
+        <Container className="body">
+          <div className="flex-display py3 features">
+            <div className="flex-display item">
+              <img src={image} />
+              <div className="flex-display direction-col item-text">
+                <div className="title">
+                  <h4>Worldwide Shipping</h4>
+                </div>
+                <div className="body">
+                  We ship internationally to most countries and foreign
+                  territories.
+                </div>
+              </div>
+            </div>
+            <div className="flex-display item">
+              <img src="https://res.cloudinary.com/magwatt/image/upload/v1628080538/4_v4ayeo.png" />
+              <div>
+                <div className="title">
+                  <h4>Best Quality</h4>
+                </div>
+                <div className="body">
+                  Our company is known for its high-quality and durable
+                  products.
+                </div>
+              </div>
+            </div>
+            <div className="flex-display item">
+              <img src="https://res.cloudinary.com/magwatt/image/upload/v1628080538/3_yqzh80.png" />
+              <div>
+                <div className="title">
+                  <h4>Secure Payments</h4>
+                </div>
+                <div className="body">We offer best discounts and promos.</div>
+              </div>
+            </div>
+            <div className="flex-display item">
+              <img src="https://res.cloudinary.com/magwatt/image/upload/v1628080538/1_qbavpu.png" />
+              <div>
+                <div className="title">
+                  <h4>Discounts</h4>
+                </div>
+                <div className="body">
+                  Our site uses high-level SSL encryption technology.
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="flex-display py-3">
             <div className="flex-display direction-col about">
               <img
