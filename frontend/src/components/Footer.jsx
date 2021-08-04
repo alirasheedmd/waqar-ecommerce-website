@@ -1,16 +1,20 @@
 import React from "react"
+import "./footer.scss"
 import { Container, Image } from "react-bootstrap"
 import { Link } from "react-router-dom"
-import image from "../images/secure.svg"
+import shipping from "../images/features/shipping.svg"
+import quality from "../images/features/quality.svg"
+import discount from "../images/features/discount.svg"
+import secure from "../images/features/secure.svg"
 
 const Footer = () => {
   return (
     <div id="footer">
       <footer id="large-screen">
         <Container className="body">
-          <div className="flex-display py3 features">
+          <div className="flex-display features">
             <div className="flex-display item">
-              <img src={image} />
+              <img src={shipping} />
               <div className="flex-display direction-col item-text">
                 <div className="title">
                   <h4>Worldwide Shipping</h4>
@@ -22,8 +26,8 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex-display item">
-              <img src="https://res.cloudinary.com/magwatt/image/upload/v1628080538/4_v4ayeo.png" />
-              <div>
+              <img src={quality} />
+              <div className="flex-display direction-col item-text">
                 <div className="title">
                   <h4>Best Quality</h4>
                 </div>
@@ -34,8 +38,8 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex-display item">
-              <img src="https://res.cloudinary.com/magwatt/image/upload/v1628080538/3_yqzh80.png" />
-              <div>
+              <img src={discount} />
+              <div className="flex-display direction-col item-text">
                 <div className="title">
                   <h4>Secure Payments</h4>
                 </div>
@@ -43,8 +47,8 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex-display item">
-              <img src="https://res.cloudinary.com/magwatt/image/upload/v1628080538/1_qbavpu.png" />
-              <div>
+              <img src={secure} />
+              <div className="flex-display direction-col item-text">
                 <div className="title">
                   <h4>Discounts</h4>
                 </div>
@@ -54,7 +58,15 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="flex-display py-3">
+          <hr
+            style={{
+              color: "#fff",
+              backgroundColor: "#fff",
+              height: 0.5,
+              borderColor: "#fff",
+            }}
+          />
+          <div className="flex-display footer-brand">
             <div className="flex-display direction-col about">
               <img
                 src="https://res.cloudinary.com/magwatt/image/upload/v1628076626/logo_trace-removebg-preview_lnl1ty.png"
