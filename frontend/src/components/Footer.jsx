@@ -1,5 +1,5 @@
 import React from "react"
-import "./footer.scss"
+import "./Footer.scss"
 import { Container, Image } from "react-bootstrap"
 import { Link } from "react-router-dom"
 import shipping from "../images/features/shipping.svg"
