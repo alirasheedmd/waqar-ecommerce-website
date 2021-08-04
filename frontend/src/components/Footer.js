@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, Row, Col, Form } from "react-bootstrap"
+import { Container, Row, Col, Form, Button } from "react-bootstrap"
 import { Link } from "react-router-dom"
 
 const Footer = () => {
@@ -20,12 +20,27 @@ const Footer = () => {
               <div></div>
               <div></div>
             </div>
-            <div className="flex-display direction-col">
+            <div className="flex-display direction-col contact">
               <div className="footer-heading">Contact</div>
-              <div></div>
+              <div className="contact-body">
+                <p>
+                  DIM Store
+                  <br />
+                  Suit A504
+                  <br />
+                  Saima Drive Inn <br />
+                  Gulshan-e-Iqbal
+                  <br />
+                  Karachi <br />
+                  Pakistan <br />
+                  Phone: <br />
+                  Email: <br />
+                  Website: <br />
+                </p>
+              </div>
               <div></div>
             </div>
-            <div className="flex-display direction-col grow-2">
+            <div className="flex-display direction-col subscribe">
               <div className="footer-heading">
                 <p>Subscribe To Our Weekly Newsletter</p>
               </div>
@@ -33,17 +48,15 @@ const Footer = () => {
                 <span>For Latest News and Offers</span>
               </div>
               <div>
-                <Form>
-                  <Form.Group>
-                    <Form.Control
-                      type="text"
-                      placeholder="Email Address"
-                      className="news"
-                    />
-                  </Form.Group>
-                </Form>
+                <form>
+                  <input type="text" placeholder="Email Address" />
+                  <input type="submit" value="Subscribe" />
+                </form>
               </div>
             </div>
+          </div>
+          <div className="copyright">
+            <p>Copyright © 2021 DIMS Store | All Rights Reserved.</p>
           </div>
         </Container>
       </footer>

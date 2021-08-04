@@ -5,6 +5,7 @@
   padding-right: 0;
   margin-left: 0;
   margin-right: 0;
+  overflow-x: hidden;
 }
 
 $dm-sans: "DM Sans", sans-serif;
@@ -190,8 +191,17 @@ h2 {
       font-weight: 700;
       font-size: 15px;
       letter-spacing: normal;
+      margin-bottom: 10px;
     }
-    .grow-2 {
+
+    .contact-body {
+      p {
+        color: #858997 !important;
+        line-height: 18px;
+      }
+    }
+
+    .subscribe {
       width: 30vw;
       span {
         color: #fff;
@@ -203,9 +213,35 @@ h2 {
       p {
         color: #999;
       }
-      .news {
+      [type="text"] {
         background-color: #2b2e38;
-        border-radius: 5px;
+        padding: 20px 220px;
+        width: 90%;
+        padding-left: 10px;
+        outline: none;
+        border: none;
+        color: #999;
+        border-radius: 10px;
+        margin-top: 30px;
+        font-family: $dm-sans;
+      }
+      [type="submit"] {
+        margin-left: -130px;
+        padding: 10px 30px;
+        transition: 0.5s;
+        text-transform: none;
+        background-color: #4d65f6;
+        border: none;
+        border-radius: 10px;
+        color: #fff;
+        font-family: $dm-sans;
+        &:hover {
+          background-color: #000;
+        }
+      }
+
+      .copyright {
+        height: 100px;
       }
     }
     @include small() {
