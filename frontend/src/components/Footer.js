@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 const Footer = () => {
   return (
     <div id="footer">
-      <footer id="large-screen">
+      <footer id="large-screen" className="section-padding">
         <Container className="body">
           <div className="flex-display py-3">
             <div className="flex-display direction-col">
@@ -55,10 +55,10 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="copyright">
-            <p>Copyright © 2021 DIMS Store | All Rights Reserved.</p>
-          </div>
         </Container>
+        <div className="copyright">
+          <p>Copyright © 2021 DIMS Store | All Rights Reserved.</p>
+        </div>
       </footer>
       <footer id="small-screen">
         <div className="footer-icons-list">

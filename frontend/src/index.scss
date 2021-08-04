@@ -239,11 +239,8 @@ h2 {
           background-color: #000;
         }
       }
-
-      .copyright {
-        height: 100px;
-      }
     }
+
     @include small() {
       display: none;
     }
@@ -277,6 +274,20 @@ h2 {
     }
   }
 }
+.copyright {
+  background-color: #333;
+  width: 100vw;
+  display: flex;
+  height: 100%;
+  padding: 20px 0;
+  justify-content: center;
+  align-items: center;
+  p {
+    width: 90%;
+    text-align: start;
+    margin: 0;
+  }
+}
 
 .product-page {
   @include small() {
@@ -300,9 +311,12 @@ h2 {
   text-align: start;
   justify-content: space-between;
   flex-direction: row;
-  padding: 60px 0;
 }
 
 .direction-col {
   flex-direction: column;
+}
+
+.section-padding {
+  padding: 50px 0;
 }
