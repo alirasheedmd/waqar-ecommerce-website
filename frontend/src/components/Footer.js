@@ -1,18 +1,24 @@
 import React from "react"
-import { Container, Row, Col, Form, Button } from "react-bootstrap"
+import { Container, Image } from "react-bootstrap"
 import { Link } from "react-router-dom"
 
 const Footer = () => {
   return (
     <div id="footer">
-      <footer id="large-screen" className="section-padding">
-        <Container className="body">
+      <footer id="large-screen">
+        <Container className="body section-padding">
           <div className="flex-display py-3">
-            <div className="flex-display direction-col">
-              <div className="footer-heading">Logo</div>
-              <div>Buy wide range of products from top brands.</div>
-              <div></div>
-              <div></div>
+            <div className="flex-display direction-col about">
+              <img
+                src="https://res.cloudinary.com/magwatt/image/upload/v1628076626/logo_trace-removebg-preview_lnl1ty.png"
+                className="logo"
+              />
+              <div>
+                <p>Buy wide range of products from top brands.</p>
+              </div>
+              <div>
+                <img src="https://res.cloudinary.com/magwatt/image/upload/v1628077291/payment-methods_w37pyh.png" />
+              </div>
             </div>
             <div className="flex-display direction-col pages">
               <div className="footer-heading">Quick Links</div>
@@ -75,45 +81,6 @@ const Footer = () => {
         </Container>
         <div className="copyright">
           <p>Copyright © 2021 DIMS Store | All Rights Reserved.</p>
-        </div>
-      </footer>
-      <footer id="small-screen">
-        <div className="footer-icons-list">
-          <div className="item">
-            <Link to="/">
-              <i className="footer-icon fas fa-home"></i>
-              <br />
-              <span className="item-text">Home</span>
-            </Link>
-          </div>
-          <div className="item">
-            <Link to="/cart">
-              <i className="footer-icon fas fa-shopping-bag"></i>
-              <br />
-              <span className="item-text">Shop</span>
-            </Link>
-          </div>
-          <div className="item">
-            <Link to="/offer">
-              <i className="footer-icon fas fa-tag"></i>
-              <br />
-              <span className="item-text">Offers</span>
-            </Link>
-          </div>
-          <div className="item">
-            <Link to="/profile">
-              <i className=" footer-icon far fa-user-circle"></i>
-              <br />
-              <span className="item-text">Me</span>
-            </Link>
-          </div>
-          <div className="item">
-            <Link to="/stores">
-              <i className=" footer-icon fas fa-store"></i>
-              <br />
-              <span className="item-text">Stores</span>
-            </Link>
-          </div>
         </div>
       </footer>
     </div>

@@ -184,6 +184,9 @@ h2 {
 
 #footer {
   #large-screen {
+    .container {
+      padding: 100px 0;
+    }
     background: #20242e;
     color: #fff;
     .footer-heading {
@@ -192,6 +195,18 @@ h2 {
       font-size: 15px;
       letter-spacing: normal;
       margin-bottom: 10px;
+    }
+    .about {
+      justify-content: start !important;
+      text-align: left;
+
+      p {
+        font-family: $roboto;
+        width: 90%;
+      }
+      .logo {
+        width: 150px;
+      }
     }
 
     .pages {
@@ -252,38 +267,6 @@ h2 {
         }
       }
     }
-
-    @include small() {
-      display: none;
-    }
-  }
-  #small-screen {
-    display: none;
-    @include small() {
-      display: block;
-      .footer-icons-list {
-        background: #fffafa;
-        display: flex;
-        position: fixed;
-        bottom: 0px;
-        right: 0;
-        left: 0;
-        z-index: 100 !important;
-        align-items: center;
-        justify-content: space-around;
-        .item {
-          text-align: center;
-          padding: 10px;
-          .footer-icon {
-            font-size: 20px;
-            color: rgba($color: #121212, $alpha: 0.8);
-          }
-          .item-text {
-            font-size: 10px;
-          }
-        }
-      }
-    }
   }
 }
 .copyright {
@@ -323,6 +306,9 @@ h2 {
   text-align: start;
   justify-content: space-between;
   flex-direction: row;
+  @include small() {
+    flex-direction: column;
+  }
 }
 
 .direction-col {
