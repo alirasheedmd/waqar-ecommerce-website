@@ -194,6 +194,18 @@ h2 {
       margin-bottom: 10px;
     }
 
+    .pages {
+      justify-content: start;
+      .link {
+        margin-bottom: 5px;
+      }
+      .page {
+        font-family: $roboto;
+        color: #fff;
+        padding: 0;
+      }
+    }
+
     .contact-body {
       p {
         color: #858997 !important;

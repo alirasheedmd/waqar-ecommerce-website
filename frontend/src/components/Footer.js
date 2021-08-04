@@ -14,11 +14,28 @@ const Footer = () => {
               <div></div>
               <div></div>
             </div>
-            <div className="flex-display direction-col">
+            <div className="flex-display direction-col pages">
               <div className="footer-heading">Quick Links</div>
-
-              <div></div>
-              <div></div>
+              <div className="link">
+                <Link to="/admin" className="page">
+                  Home
+                </Link>
+              </div>
+              <div className="link">
+                <Link to="/" className="page">
+                  About Us
+                </Link>
+              </div>
+              <div className="link">
+                <Link to="/" className="page">
+                  Terms and Condition
+                </Link>
+              </div>
+              <div className="link">
+                <Link to="/" className="page">
+                  Privacy and Policy
+                </Link>
+              </div>
             </div>
             <div className="flex-display direction-col contact">
               <div className="footer-heading">Contact</div>
