@@ -1,0 +1,22 @@
+#category {
+  padding: 20px 0;
+  .category-card {
+    &-wrapper {
+      border-radius: 10px;
+      padding: 15px 0;
+    }
+
+    &-1 {
+      background: linear-gradient(
+        90deg,
+        rgba(39, 166, 50, 1) 53%,
+        rgba(152, 222, 236, 1) 84%
+      );
+      border-radius: 10px;
+      font-family: roboto;
+      height: 100px;
+    }
+    &-2 {
+    }
+  }
+}

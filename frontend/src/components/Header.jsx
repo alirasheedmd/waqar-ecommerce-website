@@ -87,26 +87,6 @@ const Header = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <Navbar className="menu" expand="lg">
-        <Container>
-          <Nav>
-            {categories.map((category) => (
-              <Nav.Link href={`/search/category/${category}`} key={category}>
-                {category}
-              </Nav.Link>
-            ))}
-          </Nav>
-        </Container>
-      </Navbar>
-      <div className="menu-mobile">
-        <ul className="category-list">
-          {categories.map((category) => (
-            <li className="category-item" key={category}>
-              <a href={`/search/category/${category}`}>{category}</a>
-            </li>
-          ))}
-        </ul>
-      </div>
     </header>
   )
 }
