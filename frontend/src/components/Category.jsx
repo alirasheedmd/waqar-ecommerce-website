@@ -158,11 +158,11 @@ const Category = () => {
         <Col md={3}>
           <div className="category-card-wrapper">
             <Link to={`/categories/food`} className="link">
-              <div className="category-card-9">
+              <div className="category-card category-card-9">
                 <div className="card-items-wrapper flex-display jcc direction-col">
                   <div className="card-text-wrap">
                     <h5 className="card-text-wrap-pitch">Shop</h5>
-                    <h1 className="card-text-wrap-title">Pet Supplies</h1>
+                    <h1 className="card-text-wrap-title">Electronics</h1>
                   </div>
 
                   <Image

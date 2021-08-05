@@ -39,6 +39,17 @@ $box-3: linear-gradient(90deg, rgba(68, 43, 49, 1) 0%, rgba(59, 47, 50, 1) 53%);
 #category {
   padding: 15px 0;
   .category-card {
+    position: relative;
+    ::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      height: 30vh;
+      width: 100%;
+      background: rgba($color: #000000, $alpha: 0.1);
+      z-index: -9;
+    }
     &-wrapper {
       border-radius: 10px;
       padding: 15px 0;
@@ -108,7 +119,11 @@ $box-3: linear-gradient(90deg, rgba(68, 43, 49, 1) 0%, rgba(59, 47, 50, 1) 53%);
       }
     }
     &-5 {
-      background: #6b6969;
+      background: linear-gradient(
+        90deg,
+        rgba(157, 156, 156, 1) 0%,
+        rgba(107, 105, 105, 1) 49%
+      );
       @extend .card-properties;
       position: relative;
       height: 30vh;
@@ -119,18 +134,23 @@ $box-3: linear-gradient(90deg, rgba(68, 43, 49, 1) 0%, rgba(59, 47, 50, 1) 53%);
       &::before {
         content: "";
         position: absolute;
-        top: -20px;
-        right: -30px;
+        top: 0;
+        right: 0;
         height: 100%;
         background: url("https://res.cloudinary.com/magwatt/image/upload/v1628169515/Untitled_design-removebg-preview_fpxjd0.png")
           no-repeat center center;
+        background-size: cover;
 
         width: 100%;
         z-index: -10;
       }
     }
     &-6 {
-      background: #d66b37;
+      background: linear-gradient(
+        90deg,
+        rgba(118, 123, 194, 1) 0%,
+        rgba(45, 51, 130, 1) 51%
+      );
       height: 30vh;
       position: relative;
       @extend .card-properties;
@@ -151,11 +171,29 @@ $box-3: linear-gradient(90deg, rgba(68, 43, 49, 1) 0%, rgba(59, 47, 50, 1) 53%);
       }
     }
     &-9 {
-      background: #d66b37;
+      background: linear-gradient(
+        90deg,
+        rgba(207, 125, 125, 1) 23%,
+        rgba(231, 93, 93, 1) 71%
+      );
+      height: 30vh;
+      position: relative;
       @extend .card-properties;
-
+      z-index: 0;
       &:hover {
         box-shadow: 0px 0px 10px rgba($color: #d66b37, $alpha: 0.5);
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -10;
+        background: url("https://res.cloudinary.com/magwatt/image/upload/c_scale,w_300/v1628172679/kisspng-noise-cancelling-headphones-beats-electronics-wire-headphone-5a7354220b2290.0535702515175076180456-removebg-preview_thqdvh.png")
+          no-repeat center center;
+        background-size: contain;
       }
     }
   }
