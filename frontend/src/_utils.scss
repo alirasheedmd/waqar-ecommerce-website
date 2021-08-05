@@ -1,3 +1,5 @@
+@import "./colors";
+
 @mixin small() {
   @media only screen and (max-width: 993px) {
     @content;
@@ -14,6 +16,20 @@
   }
 }
 
+.flex-display.sa {
+  justify-content: space-around;
+}
+.flex-display.jcc {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-display.center {
+  align-items: center;
+}
+.flex-display.reverse {
+  flex-direction: row-reverse;
+}
 .direction-col {
   flex-direction: column;
   justify-content: center;
@@ -25,4 +41,16 @@
 
 .full-width {
   max-width: 100vw !important;
+}
+
+.bg-primary {
+  background: $primary-color !important;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none !important;
+  }
 }
