@@ -111,7 +111,7 @@ const Category = () => {
         <Col md={3}>
           <div className="category-card-wrapper">
             <Link to={`/categories/food`} className="link">
-              <div className="category-card-4">
+              <div className="category-card category-card-4">
                 <div className="card-items-wrapper flex-display jcc direction-col">
                   <div className="card-text-wrap">
                     <h5 className="card-text-wrap-pitch">Shop</h5>
@@ -128,7 +128,7 @@ const Category = () => {
           <div className="category-card-wrapper">
             <Link to={`/categories/food`} className="link">
               <div className="category-card-5">
-                <div className="card-items-wrapper flex-display jcc direction-col">
+                <div className="category-card card-items-wrapper flex-display jcc direction-col">
                   <div className="card-text-wrap">
                     <h5 className="card-text-wrap-pitch">Shop</h5>
                     <h1 className="card-text-wrap-title">
@@ -144,7 +144,7 @@ const Category = () => {
         <Col md={3}>
           <div className="category-card-wrapper">
             <Link to={`/categories/food`} className="link">
-              <div className="category-card-6">
+              <div className="category-card category-card-6">
                 <div className="card-items-wrapper flex-display jcc direction-col">
                   <div className="card-text-wrap">
                     <h5 className="card-text-wrap-pitch">Shop</h5>
