@@ -9,6 +9,7 @@ import Paginate from "../components/Paginate"
 import ProductCarousel from "../components/ProductCarousel"
 import Meta from "../components/Meta"
 import { Link } from "react-router-dom"
+import Features from "../components/Features"
 
 const HomeScreen = ({ match }) => {
   const pageNumber = match.params.pageNumber || 1
@@ -24,30 +25,33 @@ const HomeScreen = ({ match }) => {
   }, [dispatch, keyword, pageNumber])
 
   return (
-    <div className="product-page">
-      <Meta />
-      <h1>Latest Products</h1>
-      {loading ? (
-        <Loader />
-      ) : error ? (
-        <Message variant="danger">{error}</Message>
-      ) : (
-        <>
-          <Row>
-            {products.map((product) => (
-              <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
-                <Product product={product} />
-              </Col>
-            ))}
-          </Row>
-          <Paginate
-            pages={pages}
-            page={page}
-            keyword={keyword ? keyword : ""}
-          />
-        </>
-      )}
-    </div>
+    <>
+      <div className="product-page">
+        <Meta />
+        <h1>Latest Products</h1>
+        {loading ? (
+          <Loader />
+        ) : error ? (
+          <Message variant="danger">{error}</Message>
+        ) : (
+          <>
+            <Row>
+              {products.map((product) => (
+                <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
+                  <Product product={product} />
+                </Col>
+              ))}
+            </Row>
+            <Paginate
+              pages={pages}
+              page={page}
+              keyword={keyword ? keyword : ""}
+            />
+          </>
+        )}
+      </div>
+      <Features />
+    </>
   )
 }
 

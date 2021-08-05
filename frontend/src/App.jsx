@@ -23,7 +23,8 @@ const App = () => {
   return (
     <Router>
       <Header />
-      <main id="main" className="mar-y-3">
+      <main id="main">
+        <Route path="/" component={HomeScreen} exact />
         <Container className="body">
           <Route path="/login" component={LoginScreen} />
           <Route path="/register" component={RegisterScreen} exact />
@@ -34,7 +35,6 @@ const App = () => {
             component={ProductEditScreen}
           />
           <Route path="/cart/:id?" component={CartScreen} />
-          <Route path="/" component={HomeScreen} exact />
           <Route path="/page/:pageNumber" component={HomeScreen} exact />
           <Route
             path="/search/:keyword/page/:pageNumber"

@@ -5,7 +5,6 @@
   padding-right: 0;
   margin-left: 0;
   margin-right: 0;
-  overflow-x: hidden;
 }
 
 @import "colors";
@@ -163,9 +162,10 @@ h2 {
 }
 
 #main,
-#footer {
+#footer,
+#features {
   .body {
-    max-width: 90vw;
+    max-width: 90vw !important;
   }
 }
 
