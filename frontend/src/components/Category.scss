@@ -5,37 +5,33 @@ $box-1: linear-gradient(
   rgba(215, 80, 14, 1) 0%,
   rgba(214, 107, 55, 1) 53%
 );
+$box-2: linear-gradient(90deg, rgba(68, 43, 49, 1) 0%, rgba(59, 47, 50, 1) 53%);
+$box-3: linear-gradient(90deg, rgba(68, 43, 49, 1) 0%, rgba(59, 47, 50, 1) 53%);
 
 .card-properties {
   border-radius: 10px;
-  font-family: $dm-sans;
-  transition: all 1s linear;
+  transition: transform 1s linear;
   overflow: hidden;
-}
-
-.card {
-  &-text-wrap {
-    &-title {
-      color: #fff !important;
-      font-family: $roboto;
-      font-weight: 800;
+  .card {
+    &-text-wrap {
+      padding-top: 40px;
+      background: transparent;
+      &-pitch {
+        color: #fff;
+        background: transparent;
+        margin: 0;
+        font-weight: 200;
+        font-family: $dm-sans;
+      }
+      &-title {
+        color: #fff !important;
+        font-family: $roboto;
+        font-weight: 800;
+      }
     }
-  }
-  &-image {
-    transition: 1s ease;
-    padding: 20px;
-  }
-}
-
-.card-content-settings {
-  .card-items-wrapper {
-    .card-text-wrap {
-      padding-top: 20px;
-    }
-    .card-image {
+    &-image {
+      transition: 1s ease;
       width: 100%;
-      padding: 0;
-      top: 40px;
     }
   }
 }
@@ -46,10 +42,15 @@ $box-1: linear-gradient(
     &-wrapper {
       border-radius: 10px;
       padding: 15px 0;
+      height: 100%;
     }
     &-1 {
       background: $box-1;
       @extend .card-properties;
+      .card-image {
+        width: fit-content;
+        padding: 50px;
+      }
       &:hover .card-image {
         transform: scale(1.05);
       }
@@ -58,18 +59,17 @@ $box-1: linear-gradient(
       }
     }
     &-2 {
-      background: #d66b37;
+      background: $box-2;
       @extend .card-properties;
       &:hover {
-        box-shadow: 0px 0px 10px rgba($color: #d66b37, $alpha: 0.5);
+        box-shadow: 0px 0px 10px rgba($color: #30221b, $alpha: 0.5);
         &:hover .card-image {
           transform: scale(1.05);
         }
       }
-      @extend .card-content-settings;
     }
     &-3 {
-      background: #d66b37;
+      background: #60a5a6;
       @extend .card-properties;
       &:hover {
         box-shadow: 0px 0px 10px rgba($color: #d66b37, $alpha: 0.5);
@@ -77,36 +77,83 @@ $box-1: linear-gradient(
           transform: scale(1.05);
         }
       }
-      @extend .card-content-settings;
     }
     &-4 {
-      background: #d66b37;
+      background: linear-gradient(
+        90deg,
+        rgba(194, 118, 136, 1) 0%,
+        rgba(209, 72, 107, 1) 53%
+      );
       @extend .card-properties;
-      @extend .card-content-settings;
+      position: relative;
+      height: 30vh;
+      z-index: 10;
       &:hover {
         box-shadow: 0px 0px 10px rgba($color: #d66b37, $alpha: 0.5);
+      }
+      &:hover .card-image {
+        transform: scale(1.05);
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: url("https://res.cloudinary.com/magwatt/image/upload/c_scale,w_250/v1628155106/makeup-kits1_lxqgix.png")
+          center center no-repeat;
+        background-size: cover;
+        z-index: -10;
       }
     }
     &-5 {
-      background: #d66b37;
+      background: #6b6969;
       @extend .card-properties;
-      @extend .card-content-settings;
+      position: relative;
+      height: 30vh;
+      z-index: 11;
       &:hover {
         box-shadow: 0px 0px 10px rgba($color: #d66b37, $alpha: 0.5);
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        right: -30px;
+        height: 100%;
+        background: url("https://res.cloudinary.com/magwatt/image/upload/v1628169515/Untitled_design-removebg-preview_fpxjd0.png")
+          no-repeat center center;
+
+        width: 100%;
+        z-index: -10;
       }
     }
     &-6 {
       background: #d66b37;
+      height: 30vh;
+      position: relative;
       @extend .card-properties;
-      @extend .card-content-settings;
+      z-index: 0;
       &:hover {
         box-shadow: 0px 0px 10px rgba($color: #d66b37, $alpha: 0.5);
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -10;
+        background: url("https://res.cloudinary.com/magwatt/image/upload/v1628168516/Fitness_gku6qb.png")
+          no-repeat center center;
       }
     }
     &-9 {
       background: #d66b37;
       @extend .card-properties;
-      @extend .card-content-settings;
+
       &:hover {
         box-shadow: 0px 0px 10px rgba($color: #d66b37, $alpha: 0.5);
       }
@@ -130,7 +177,9 @@ $box-1: linear-gradient(
             rgba(115, 231, 136, 1) 64%
           );
           @extend .card-properties;
-          @extend .card-content-settings;
+          &:hover .card-image {
+            transform: scale(1.05);
+          }
           width: 100%;
           height: 100%;
           &:hover {
@@ -138,9 +187,11 @@ $box-1: linear-gradient(
           }
         }
         &-8 {
-          background: #d66b37;
+          background: #6746ee;
           @extend .card-properties;
-          @extend .card-content-settings;
+          &:hover .card-image {
+            transform: scale(1.05);
+          }
           &:hover {
             box-shadow: 0px 0px 10px rgba($color: #d66b37, $alpha: 0.5);
           }
