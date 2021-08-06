@@ -1,7 +1,6 @@
 import React, { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux" // useSelector will display the products on the screen
 import Product from "../components/Product"
-import { Row, Col } from "react-bootstrap"
 import { listFeaturedProducts } from "../actions/productAction"
 import Message from "../components/Message"
 import Loader from "../components/Loader"
@@ -39,7 +38,7 @@ const FeaturedProducts = () => {
   }, [dispatch])
 
   return (
-    <div className="product-page">
+    <div className="product-page section-padding">
       <Meta />
       {loading ? (
         <Loader />
@@ -49,7 +48,7 @@ const FeaturedProducts = () => {
         <>
           <section className="feature-products">
             <div className="section-heading">
-              <h3>Feature Products</h3>
+              <h3>Featured Products</h3>
             </div>
             <hr
               style={{
@@ -65,7 +64,7 @@ const FeaturedProducts = () => {
               draggable={true}
               showDots={true}
               responsive={responsive}
-              ssr={false} // means to render carousel on server-side.
+              ssr={true} // means to render carousel on server-side.
               infinite={true}
               autoPlaySpeed={1000}
               keyBoardControl={true}
