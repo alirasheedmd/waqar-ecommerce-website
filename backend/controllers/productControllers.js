@@ -75,7 +75,10 @@ const getProducts = asyncHandler(async (req, res) => {
   if (type === "category") {
     const keyword = req.query.keyword
       ? {
-          category: req.query.keyword,
+          category: {
+            $regex: req.query.keyword, // we are using regex becuase when some one type ip we need iphone to come up
+            $options: "i",
+          },
         }
       : {}
 

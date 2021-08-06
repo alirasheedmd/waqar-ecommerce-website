@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom"
 import { Container } from "react-bootstrap"
 import Header from "./components/Header"
 import Footer from "./components/Footer.jsx"
-import HomeScreen from "./screens/HomeScreen"
+import LandingScreen from "./screens/LandingScreen"
+import SearchScreen from "./screens/SearchScreen"
 import ProductScreen from "./screens/ProductScreen"
 import CartScreen from "./screens/CartScreen"
 import LoginScreen from "./screens/LoginScreen"
@@ -24,7 +25,7 @@ const App = () => {
     <Router>
       <Header />
       <main id="main">
-        <Route path="/" component={HomeScreen} exact />
+        <Route path="/" component={LandingScreen} exact />
         <Container className="body">
           <Route path="/login" component={LoginScreen} />
           <Route path="/register" component={RegisterScreen} exact />
@@ -35,10 +36,10 @@ const App = () => {
             component={ProductEditScreen}
           />
           <Route path="/cart/:id?" component={CartScreen} />
-          <Route path="/page/:pageNumber" component={HomeScreen} exact />
+          <Route path="/page/:pageNumber" component={SearchScreen} exact />
           <Route
             path="/search/:keyword/page/:pageNumber"
-            component={HomeScreen}
+            component={SearchScreen}
           />
           <Route path="/shipping" component={ShippingScreen} />
           <Route path="/payment" component={PaymentScreen} />
@@ -57,8 +58,8 @@ const App = () => {
             component={ProductListScreen}
             exact
           />
-          <Route path="/search/:keyword" component={HomeScreen} exact />
-          <Route path="/search/:type/:keyword" component={HomeScreen} exact />
+          <Route path="/search/:keyword" component={SearchScreen} exact />
+          <Route path="/search/:type/:keyword" component={SearchScreen} exact />
         </Container>
       </main>
       <Footer />

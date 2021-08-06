@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import "./HomeScreen.scss"
+import "./LandingScreen.scss"
 import { useDispatch, useSelector } from "react-redux" // useSelector will display the products on the screen
 import Product from "../components/Product"
 import { Row, Col, Container, Image } from "react-bootstrap"
@@ -10,8 +10,9 @@ import Meta from "../components/Meta"
 import { Link } from "react-router-dom"
 import Features from "../components/Features"
 import Category from "../components/Category"
+import Products from "../components/Products"
 
-const HomeScreen = () => {
+const LandingScreen = () => {
   return (
     <>
       <div className="category-page">
@@ -25,4 +26,4 @@ const HomeScreen = () => {
   )
 }
 
-export default HomeScreen
+export default LandingScreen

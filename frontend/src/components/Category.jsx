@@ -11,7 +11,7 @@ const Category = () => {
           <Row className="category-grid-wrapper">
             <Col md={12}>
               <div className="category-card-wrapper">
-                <Link to={`/categories/food`} className="link">
+                <Link to={`/search/category/Pet`} className="link">
                   <div className="category-card-1">
                     <div className="card-items-wrapper flex-display sa center">
                       <div className="card-text-wrap">
@@ -30,7 +30,7 @@ const Category = () => {
             </Col>
             <Col md={6}>
               <div className="category-card-wrapper">
-                <Link to={`/categories/food`} className="link">
+                <Link to={`/search/category/Kitchen`} className="link">
                   <div className="category-card-2">
                     <div className="card-items-wrapper flex-display jcc direction-col">
                       <div className="card-text-wrap">
@@ -49,7 +49,7 @@ const Category = () => {
             </Col>
             <Col md={6}>
               <div className="category-card-wrapper">
-                <Link to={`/categories/food`} className="link">
+                <Link to={`/search/category/Tools`} className="link">
                   <div className="category-card-3">
                     <div className="card-items-wrapper flex-display jcc direction-col">
                       <div className="card-text-wrap">
@@ -71,7 +71,7 @@ const Category = () => {
         <Col xs={6} md={3} className="aside">
           <div className="aside-wrapper">
             <div className="category-card-wrapper">
-              <Link to={`/categories/food`} className="link">
+              <Link to={`/search/category/Mobile`} className="link">
                 <div className="category-card-7">
                   <div className="card-items-wrapper flex-display jcc direction-col">
                     <div className="card-text-wrap">
@@ -88,7 +88,7 @@ const Category = () => {
               </Link>
             </div>
             <div className="category-card-wrapper">
-              <Link to={`/categories/food`} className="link">
+              <Link to={`/search/category/Furniture`} className="link">
                 <div className="category-card-8">
                   <div className="card-items-wrapper flex-display jcc direction-col">
                     <div className="card-text-wrap">
@@ -110,7 +110,7 @@ const Category = () => {
       <Row>
         <Col md={3}>
           <div className="category-card-wrapper">
-            <Link to={`/categories/food`} className="link">
+            <Link to={`/search/category/Beauty`} className="link">
               <div className="category-card category-card-4">
                 <div className="card-items-wrapper flex-display jcc direction-col">
                   <div className="card-text-wrap">
@@ -126,7 +126,7 @@ const Category = () => {
         </Col>
         <Col md={3}>
           <div className="category-card-wrapper">
-            <Link to={`/categories/food`} className="link">
+            <Link to={`/search/category/Office`} className="link">
               <div className="category-card-5">
                 <div className="category-card card-items-wrapper flex-display jcc direction-col">
                   <div className="card-text-wrap">
@@ -143,7 +143,7 @@ const Category = () => {
         </Col>
         <Col md={3}>
           <div className="category-card-wrapper">
-            <Link to={`/categories/food`} className="link">
+            <Link to={`/search/category/Fitness`} className="link">
               <div className="category-card category-card-6">
                 <div className="card-items-wrapper flex-display jcc direction-col">
                   <div className="card-text-wrap">
@@ -157,7 +157,7 @@ const Category = () => {
         </Col>
         <Col md={3}>
           <div className="category-card-wrapper">
-            <Link to={`/categories/food`} className="link">
+            <Link to={`/search/category/Electronics`} className="link">
               <div className="category-card category-card-9">
                 <div className="card-items-wrapper flex-display jcc direction-col">
                   <div className="card-text-wrap">
