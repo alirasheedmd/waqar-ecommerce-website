@@ -18,6 +18,7 @@ const ProductEditScreen = ({ match, history }) => {
   const [category, setCategory] = useState("")
   const [countInStock, setCountInStock] = useState(0)
   const [image, setImage] = useState("")
+  const [isFeatured, setIsFeatured] = useState()
   const [uploading, setUploading] = useState("")
 
   const dispatch = useDispatch()
@@ -47,6 +48,7 @@ const ProductEditScreen = ({ match, history }) => {
         setCategory(product.category)
         setCountInStock(product.countInStock)
         setImage(product.image)
+        setIsFeatured(product.isFeatured)
       }
     }
   }, [dispatch, product, productId, history, successUpdate])
@@ -81,6 +83,7 @@ const ProductEditScreen = ({ match, history }) => {
       category,
       countInStock,
       image,
+      isFeatured,
     }
     dispatch(updateProduct(updatedProduct, productId))
   }
@@ -163,6 +166,14 @@ const ProductEditScreen = ({ match, history }) => {
               ></Form.File>
               {uploading && <Loader />}
             </Form.Group>
+            <Form.Check
+              type="checkbox"
+              id="isFeaturedCheckbox"
+              className="checkbox"
+              label={`Featured`}
+              defaultChecked={isFeatured}
+              onChange={(e) => setIsFeatured(e.target.checked)}
+            />
             <Button type="submit" variant="primary">
               Update
             </Button>

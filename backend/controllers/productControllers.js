@@ -15,6 +15,7 @@ const createProduct = asyncHandler(async (req, res) => {
     description,
     rating,
     numReviews,
+    isFeatured,
     countInStock,
   } = req.body
 
@@ -27,6 +28,7 @@ const createProduct = asyncHandler(async (req, res) => {
     image,
     description,
     countInStock,
+    isFeatured,
     rating,
     numReviews,
   })
@@ -51,6 +53,7 @@ const updateProduct = asyncHandler(async (req, res) => {
     product.image = req.body.image || product.image
     product.description = req.body.description || product.description
     product.countInStock = req.body.countInStock || product.countInStock
+    product.isFeatured = req.body.isFeatured || product.isFeatured
     product.rating = req.body.rating || product.rating
     product.numReviews = req.body.numReviews || product.numReviews
 

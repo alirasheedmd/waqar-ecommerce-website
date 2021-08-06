@@ -8,11 +8,13 @@ import axios from "axios"
 import { PRODUCT_CREATE_RESET } from "../constants/productContants"
 import { createProduct } from "../actions/productAction"
 import { listProductsCategoryList } from "../actions/productAction"
+import "./AddProduct.scss"
 
 const AddProduct = ({ match, history }) => {
   const [name, setName] = useState("")
   const [description, setDescription] = useState("")
   const [price, setPrice] = useState("")
+  const [isFeatured, setIsFeatured] = useState(false)
   const [brand, setBrand] = useState("")
   const [category, setCategory] = useState("")
   const [image, setImage] = useState("")
@@ -65,9 +67,11 @@ const AddProduct = ({ match, history }) => {
       price,
       brand,
       category,
+      isFeatured,
       image,
       numSkus: 0,
     }
+    console.log(newProduct)
     dispatch(createProduct(newProduct))
   }
 
@@ -141,6 +145,13 @@ const AddProduct = ({ match, history }) => {
             ></Form.File>
             {uploading && <Loader />}
           </Form.Group>
+          <Form.Check
+            type="checkbox"
+            id="isFeaturedCheckbox"
+            className="checkbox"
+            label={`Featured`}
+            onChange={(e) => setIsFeatured(e.target.checked)}
+          />
           <Button type="submit" variant="primary">
             Save
           </Button>
