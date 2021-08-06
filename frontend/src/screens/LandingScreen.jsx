@@ -1,16 +1,10 @@
-import React, { useEffect } from "react"
+import React from "react"
 import "./LandingScreen.scss"
-import { useDispatch, useSelector } from "react-redux" // useSelector will display the products on the screen
-import Product from "../components/Product"
-import { Row, Col, Container, Image } from "react-bootstrap"
-import { listProducts } from "../actions/productAction"
-import Message from "../components/Message"
-import Loader from "../components/Loader"
+import { Container } from "react-bootstrap"
 import Meta from "../components/Meta"
-import { Link } from "react-router-dom"
 import Features from "../components/Features"
 import Category from "../components/Category"
-import Products from "../components/Products"
+import FeaturedProducts from "../components/FeaturedProducts"
 
 const LandingScreen = () => {
   return (
@@ -19,6 +13,7 @@ const LandingScreen = () => {
         <Meta />
         <Container className="body">
           <Category />
+          <FeaturedProducts />
         </Container>
       </div>
       <Features />

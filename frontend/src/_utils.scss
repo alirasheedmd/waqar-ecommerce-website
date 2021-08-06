@@ -54,3 +54,12 @@ a {
     text-decoration: none !important;
   }
 }
+
+section {
+  background: #fff;
+  border-radius: 10px;
+  .section-heading {
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+}

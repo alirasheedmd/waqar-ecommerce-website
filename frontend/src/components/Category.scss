@@ -1,4 +1,5 @@
 @import "../colors";
+@import "../utils";
 
 $box-1: linear-gradient(
   90deg,
@@ -200,6 +201,7 @@ $box-3: linear-gradient(90deg, rgba(68, 43, 49, 1) 0%, rgba(59, 47, 50, 1) 53%);
   .aside {
     height: 100%;
     width: 100%;
+
     &-wrapper {
       height: 100%;
       width: 100%;

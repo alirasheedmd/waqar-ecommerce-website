@@ -23,6 +23,9 @@ import {
   PRODUCT_CATEGORY_REQUEST,
   PRODUCT_CATEGORY_SUCCESS,
   PRODUCT_CATEGORY_FAIL,
+  PRODUCT_FEATURED_REQUEST,
+  PRODUCT_FEATURED_SUCCESS,
+  PRODUCT_FEATURED_FAIL,
 } from "../constants/productContants"
 import axios from "axios"
 import { logout } from "../actions/userActions"
@@ -222,6 +225,28 @@ export const listTopProducts = () => async (dispatch) => {
     })
   }
 }
+
+export const listFeaturedProducts = () => async (dispatch) => {
+  try {
+    dispatch({ type: PRODUCT_FEATURED_REQUEST }) //first the action will fire off the request reducer
+
+    const { data } = await axios.get(`/api/products/featuredproducts`)
+
+    dispatch({
+      type: PRODUCT_FEATURED_SUCCESS, // this will fill in the payload with the fetched product data.
+      payload: data,
+    })
+  } catch (error) {
+    dispatch({
+      type: PRODUCT_FEATURED_FAIL,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    })
+  }
+}
+
 export const listProductsCategoryList = () => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_CATEGORY_REQUEST }) //first the action will fire off the request reducer

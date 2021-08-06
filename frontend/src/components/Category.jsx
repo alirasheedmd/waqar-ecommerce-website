@@ -68,7 +68,7 @@ const Category = () => {
             </Col>
           </Row>
         </Col>
-        <Col xs={6} md={3} className="aside">
+        <Col xs={12} md={3} className="aside">
           <div className="aside-wrapper">
             <div className="category-card-wrapper">
               <Link to={`/search/category/Mobile`} className="link">

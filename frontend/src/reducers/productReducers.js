@@ -26,6 +26,9 @@ import {
   PRODUCT_CATEGORY_REQUEST,
   PRODUCT_CATEGORY_SUCCESS,
   PRODUCT_CATEGORY_FAIL,
+  PRODUCT_FEATURED_REQUEST,
+  PRODUCT_FEATURED_SUCCESS,
+  PRODUCT_FEATURED_FAIL,
 } from "../constants/productContants"
 
 export const productListReducer = (state = { products: [] }, action) => {
@@ -145,6 +148,22 @@ export const productCategoryReducer = (state = { categories: [] }, action) => {
         categories: action.payload,
       } // this will fetch the payload value from the productAction.js file.
     case PRODUCT_CATEGORY_FAIL:
+      return { loading: false, error: action.payload }
+    default:
+      return state
+  }
+}
+
+export const productFeaturedReducer = (state = { products: [] }, action) => {
+  switch (action.type) {
+    case PRODUCT_FEATURED_REQUEST:
+      return { loading: true, products: [] }
+    case PRODUCT_FEATURED_SUCCESS:
+      return {
+        loading: false,
+        products: action.payload,
+      } // this will fetch the payload value from the productAction.js file.
+    case PRODUCT_FEATURED_FAIL:
       return { loading: false, error: action.payload }
     default:
       return state

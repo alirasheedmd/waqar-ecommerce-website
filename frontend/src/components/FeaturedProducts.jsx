@@ -1,27 +1,42 @@
 import React, { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux" // useSelector will display the products on the screen
 import Product from "../components/Product"
-import { Row, Col, Container, Image } from "react-bootstrap"
-import { listProducts } from "../actions/productAction"
+import { Row, Col } from "react-bootstrap"
+import { listFeaturedProducts } from "../actions/productAction"
 import Message from "../components/Message"
 import Loader from "../components/Loader"
-import Paginate from "../components/Paginate"
-import ProductCarousel from "../components/ProductCarousel"
 import Meta from "../components/Meta"
-import { Link } from "react-router-dom"
+import Carousel from "react-multi-carousel"
+import "react-multi-carousel/lib/styles.css"
+import "./FeaturedProducts.scss"
 
-const SearchScreen = ({ match }) => {
-  const pageNumber = match.params.pageNumber || 1
-  const keyword = match.params.keyword
-  const type = match.params.type
+const FeaturedProducts = () => {
   const dispatch = useDispatch()
 
-  const productList = useSelector((state) => state.productList)
-  const { loading, products, pages, page, error } = productList
+  const productFeaturedList = useSelector((state) => state.productFeaturedList)
+  const { loading, products, error } = productFeaturedList
+
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 6,
+      slidesToSlide: 3, // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 6,
+      slidesToSlide: 2, // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+  }
 
   useEffect(() => {
-    dispatch(listProducts(type, keyword, pageNumber)) // this will fireoff the productAction.js (listProduct that will fetch data)
-  }, [dispatch, keyword, pageNumber])
+    dispatch(listFeaturedProducts()) // this will fireoff the productAction.js (listProduct that will fetch data)
+  }, [dispatch])
 
   return (
     <div className="product-page">
@@ -32,22 +47,46 @@ const SearchScreen = ({ match }) => {
         <Message variant="danger">{error}</Message>
       ) : (
         <>
-          <Row>
-            {products.map((product) => (
-              <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
-                <Product product={product} />
-              </Col>
-            ))}
-          </Row>
-          <Paginate
-            pages={pages}
-            page={page}
-            keyword={keyword ? keyword : ""}
-          />
+          <section className="feature-products">
+            <div className="section-heading">
+              <h3>Feature Products</h3>
+            </div>
+            <hr
+              style={{
+                color: "#b4df99",
+                backgroundColor: "#b4df99",
+                height: 0.5,
+                width: "90%",
+                margin: "auto",
+              }}
+            />
+            <Carousel
+              swipeable={true}
+              draggable={true}
+              showDots={true}
+              responsive={responsive}
+              ssr={false} // means to render carousel on server-side.
+              infinite={true}
+              autoPlaySpeed={1000}
+              keyBoardControl={true}
+              customTransition="all .5"
+              transitionDuration={500}
+              containerClass="carousel-container"
+              removeArrowOnDeviceType={["tablet", "mobile"]}
+              dotListClass="custom-dot-list-style"
+              itemClass="carousel-item-padding-40-px"
+            >
+              {products.map((product) => (
+                <div className="feature-product">
+                  <Product product={product} />
+                </div>
+              ))}
+            </Carousel>
+          </section>
         </>
       )}
     </div>
   )
 }
 
-export default SearchScreen
+export default FeaturedProducts
