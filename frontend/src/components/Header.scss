@@ -1,0 +1,52 @@
+@import "../colors";
+@import "../utils";
+
+#header {
+  .container {
+    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 90vw;
+    margin: 0 auto;
+  }
+  .logo {
+    width: 200px;
+    @include small() {
+      max-width: 70px;
+    }
+  }
+
+  .search-botton {
+    padding: 100px;
+  }
+  .menu {
+    padding: 0px;
+    padding-left: 20px;
+    background-color: #000 !important;
+    a {
+      color: #fff;
+    }
+    a:hover {
+      color: #999;
+    }
+    @include small() {
+      & {
+        display: none;
+      }
+    }
+  }
+}
+
+#search {
+  .form-control {
+    border-radius: 25px;
+    background: #eee;
+    @include small() {
+      max-width: 150px;
+    }
+  }
+  margin-top: 20px;
+  margin-right: 15px;
+}

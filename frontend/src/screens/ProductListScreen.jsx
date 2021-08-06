@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { Button, Table, Row, Col } from "react-bootstrap"
 import {
@@ -11,8 +11,11 @@ import Message from "../components/Message"
 import { LinkContainer } from "react-router-bootstrap"
 import { PRODUCT_CREATE_RESET } from "../constants/productContants"
 import Paginate from "../components/Paginate"
+import Modal from "react-modal"
+import AddProduct from "../components/AddProduct"
 
 const ProductListScreen = ({ history, match }) => {
+  const [addProductModalIsOpen, setAddProductModalIsOpen] = useState(false)
   const pageNumber = match.params.pageNumber || 1
   const userLogin = useSelector((state) => state.userLogin)
   const { userInfo } = userLogin
@@ -36,17 +39,6 @@ const ProductListScreen = ({ history, match }) => {
   } = productCreate
 
   const dispatch = useDispatch()
-  const newProduct = {
-    name: "Sample Product",
-    image: "/images/playstation.jpg",
-    description: "Sample Description",
-    brand: "Sample Brand",
-    category: "Sample Category",
-    price: 0,
-    countInStock: 0,
-    rating: 0,
-    numReviews: 0,
-  }
 
   useEffect(() => {
     dispatch({ type: PRODUCT_CREATE_RESET })
@@ -69,7 +61,7 @@ const ProductListScreen = ({ history, match }) => {
   ])
 
   const createProductHandler = () => {
-    dispatch(createProduct(newProduct))
+    dispatch(createProduct())
   }
 
   const deleteProductHandler = (id) => {
@@ -85,8 +77,13 @@ const ProductListScreen = ({ history, match }) => {
           <h1>Products</h1>
         </Col>
         <Col className="text-right">
-          <Button className="my-3" onClick={createProductHandler}>
-            <i className="fas fa-plus"></i> Create Product
+          <Button
+            variant="secondary"
+            onClick={() => {
+              setAddProductModalIsOpen(true)
+            }}
+          >
+            Add Product
           </Button>
         </Col>
       </Row>
@@ -136,6 +133,14 @@ const ProductListScreen = ({ history, match }) => {
             </tbody>
           </Table>
           <Paginate pages={pages} page={page} isAdmin={true} />
+          <Modal
+            isOpen={addProductModalIsOpen & !successCreate}
+            onRequestClose={() => {
+              setAddProductModalIsOpen(false)
+            }}
+          >
+            <AddProduct />
+          </Modal>
         </>
       )}
     </>

@@ -185,6 +185,10 @@ const getTopProducts = asyncHandler(async (req, res) => {
   const products = await Product.find({}).sort({ rating: -1 }).limit(3)
   res.json(products)
 })
+const getFeaturedProducts = asyncHandler(async (req, res) => {
+  const products = await Product.find({}).sort({ rating: -1 }).limit(3)
+  res.json(products)
+})
 const getProductsCategory = asyncHandler(async (req, res) => {
   const products = await Product.find({})
   const categoryList = []

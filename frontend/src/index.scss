@@ -11,21 +11,9 @@
 @import "colors";
 @import "utils";
 
-main {
-  min-height: 80vh;
-  @include small() {
-    & {
-      position: relative;
-    }
-    &.mar-y-3 {
-      margin-top: 75px !important;
-      margin-bottom: 150px !important;
-    }
-  }
-}
-
 h3 {
   padding: 1rem 0;
+  font-family: $roboto;
 }
 
 h1 {
@@ -37,6 +25,11 @@ h1 {
 h2 {
   font-size: 1.4rem;
   padding: 0.5rem 0;
+  font-family: $roboto;
+}
+
+p {
+  font-family: $dm-sans;
 }
 
 .rating span {
@@ -47,61 +40,6 @@ h2 {
   #OrderNumber {
     font-size: 20px;
   }
-  .carousel-caption h2 {
-    font-size: 2.5vw;
-  }
-}
-
-//========================Header======================//
-
-#header {
-  .container {
-    padding: 0;
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 0;
-    margin-right: 0;
-    max-width: 95vw;
-    margin: 0 auto;
-  }
-  .logo {
-    width: 250px;
-    @include small() {
-      max-width: 70px;
-    }
-  }
-
-  .search-botton {
-    padding: 100px;
-  }
-  .menu {
-    padding: 0px;
-    padding-left: 20px;
-    background-color: #000 !important;
-    a {
-      color: #fff;
-    }
-    a:hover {
-      color: #999;
-    }
-    @include small() {
-      & {
-        display: none;
-      }
-    }
-  }
-}
-
-#search {
-  .form-control {
-    border-radius: 25px;
-    background: #eee;
-    @include small() {
-      max-width: 150px;
-    }
-  }
-  margin-top: 20px;
-  margin-right: 15px;
 }
 
 #main,
@@ -119,12 +57,3 @@ h2 {
     max-height: 300px;
   }
 }
-
-//=======================Footer============================
-
-.zindex {
-  position: absolute;
-  z-index: -10 !important;
-}
-
-//=========================================================//

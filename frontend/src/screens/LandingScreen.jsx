@@ -15,7 +15,7 @@ import Products from "../components/Products"
 const LandingScreen = () => {
   return (
     <>
-      <div className="category-page">
+      <div className="landing-page">
         <Meta />
         <Container className="body">
           <Category />

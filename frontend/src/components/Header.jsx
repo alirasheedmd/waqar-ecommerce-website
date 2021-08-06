@@ -6,6 +6,7 @@ import { logout } from "../actions/userActions"
 import { useHistory, Route } from "react-router-dom"
 import SearchBar from "./searchBar"
 import { listProductsCategoryList } from "../actions/productAction"
+import "./Header.scss"
 
 const Header = () => {
   const userLogin = useSelector((state) => state.userLogin)
