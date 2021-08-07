@@ -45,7 +45,10 @@ p {
 #main,
 #footer,
 #features {
-  .body {
+  .body.container {
+    max-width: 95vw !important;
+  }
+  .landing {
     max-width: 95vw !important;
   }
 }

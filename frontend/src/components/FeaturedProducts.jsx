@@ -23,7 +23,7 @@ const FeaturedProducts = () => {
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 6,
+      items: 3,
       slidesToSlide: 2, // optional, default to 1.
     },
     mobile: {
@@ -46,7 +46,7 @@ const FeaturedProducts = () => {
         <Message variant="danger">{error}</Message>
       ) : (
         <>
-          <section className="feature-products">
+          <section className="carosel-products">
             <div className="section-heading">
               <h3>Featured Products</h3>
             </div>

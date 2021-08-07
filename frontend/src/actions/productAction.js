@@ -26,6 +26,9 @@ import {
   PRODUCT_FEATURED_REQUEST,
   PRODUCT_FEATURED_SUCCESS,
   PRODUCT_FEATURED_FAIL,
+  PRODUCT_NEW_REQUEST,
+  PRODUCT_NEW_SUCCESS,
+  PRODUCT_NEW_FAIL,
 } from "../constants/productContants"
 import axios from "axios"
 import { logout } from "../actions/userActions"
@@ -239,6 +242,27 @@ export const listFeaturedProducts = () => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: PRODUCT_FEATURED_FAIL,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    })
+  }
+}
+
+export const listNewProducts = () => async (dispatch) => {
+  try {
+    dispatch({ type: PRODUCT_NEW_REQUEST }) //first the action will fire off the request reducer
+
+    const { data } = await axios.get(`/api/products/new`)
+
+    dispatch({
+      type: PRODUCT_NEW_SUCCESS, // this will fill in the payload with the fetched product data.
+      payload: data,
+    })
+  } catch (error) {
+    dispatch({
+      type: PRODUCT_NEW_FAIL,
       payload:
         error.response && error.response.data.message
           ? error.response.data.message

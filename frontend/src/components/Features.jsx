@@ -9,15 +9,17 @@ import { Container } from "react-bootstrap"
 const Features = () => {
   return (
     <div id="features" className="full-width">
-      <Container className="body">
+      <Container className="landing">
         <div className="flex-display features">
           <div className="flex-display item">
-            <img src={shipping} />
+            <div className="item-image">
+              <img src={shipping} />
+            </div>
             <div className="flex-display direction-col item-text">
               <div className="title">
                 <h4>Worldwide Shipping</h4>
               </div>
-              <div className="body">
+              <div className="body-text">
                 We ship internationally to most countries and foreign
                 territories.
               </div>
@@ -29,7 +31,7 @@ const Features = () => {
               <div className="title">
                 <h4>Best Quality</h4>
               </div>
-              <div className="body">
+              <div className="body-text">
                 Our company is known for its high-quality and durable products.
               </div>
             </div>
@@ -40,7 +42,9 @@ const Features = () => {
               <div className="title">
                 <h4>Secure Payments</h4>
               </div>
-              <div className="body">We offer best discounts and promos.</div>
+              <div className="body-text">
+                We offer best discounts and promos.
+              </div>
             </div>
           </div>
           <div className="flex-display item">
@@ -49,7 +53,7 @@ const Features = () => {
               <div className="title">
                 <h4>Discounts</h4>
               </div>
-              <div className="body">
+              <div className="body-text">
                 Our site uses high-level SSL encryption technology.
               </div>
             </div>

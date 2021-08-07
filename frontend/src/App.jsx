@@ -1,6 +1,7 @@
 import React from "react"
-import { BrowserRouter as Router, Route } from "react-router-dom"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import { Container } from "react-bootstrap"
+import ScrollIntoView from "./components/ScrollIntoView"
 import Header from "./components/Header"
 import Footer from "./components/Footer.jsx"
 import LandingScreen from "./screens/LandingScreen"
@@ -25,42 +26,50 @@ const App = () => {
     <Router>
       <Header />
       <main id="main">
-        <Route path="/" component={LandingScreen} exact />
-        <Container className="body">
-          <Route path="/login" component={LoginScreen} />
-          <Route path="/register" component={RegisterScreen} exact />
-          <Route path="/profile" component={ProfileScreen} />
-          <Route path="/product/:id" component={ProductScreen} />
-          <Route
-            path="/admin/products/:id/edit"
-            component={ProductEditScreen}
-          />
-          <Route path="/cart/:id?" component={CartScreen} />
-          <Route path="/page/:pageNumber" component={SearchScreen} exact />
-          <Route
-            path="/search/:keyword/page/:pageNumber"
-            component={SearchScreen}
-          />
-          <Route path="/shipping" component={ShippingScreen} />
-          <Route path="/payment" component={PaymentScreen} />
-          <Route path="/placeorder" component={PlaceOrderScreen} />
-          <Route path="/order/:id" component={OrderScreen} />
-          <Route path="/admin/orders" component={OrderListScreen} />
-          <Route path="/admin/userlist" component={AdminUsersScreen} />
-          <Route path="/admin/user/:id/edit" component={UserEditScreen} />
-          <Route
-            path="/admin/productlist"
-            component={ProductListScreen}
-            exact
-          />
-          <Route
-            path="/admin/productlist/:pageNumber"
-            component={ProductListScreen}
-            exact
-          />
-          <Route path="/search/:keyword" component={SearchScreen} exact />
-          <Route path="/search/:type/:keyword" component={SearchScreen} exact />
-        </Container>
+        <ScrollIntoView>
+          <Switch>
+            <Route path="/" component={LandingScreen} exact />
+            <Container className="body">
+              <Route path="/login" component={LoginScreen} />
+              <Route path="/register" component={RegisterScreen} exact />
+              <Route path="/profile" component={ProfileScreen} />
+              <Route path="/product/:id" component={ProductScreen} />
+              <Route
+                path="/admin/products/:id/edit"
+                component={ProductEditScreen}
+              />
+              <Route path="/cart/:id?" component={CartScreen} />
+              <Route path="/page/:pageNumber" component={SearchScreen} exact />
+              <Route
+                path="/search/:keyword/page/:pageNumber"
+                component={SearchScreen}
+              />
+              <Route path="/shipping" component={ShippingScreen} />
+              <Route path="/payment" component={PaymentScreen} />
+              <Route path="/placeorder" component={PlaceOrderScreen} />
+              <Route path="/order/:id" component={OrderScreen} />
+              <Route path="/admin/orders" component={OrderListScreen} />
+              <Route path="/admin/userlist" component={AdminUsersScreen} />
+              <Route path="/admin/user/:id/edit" component={UserEditScreen} />
+              <Route
+                path="/admin/productlist"
+                component={ProductListScreen}
+                exact
+              />
+              <Route
+                path="/admin/productlist/:pageNumber"
+                component={ProductListScreen}
+                exact
+              />
+              <Route path="/search/:keyword" component={SearchScreen} exact />
+              <Route
+                path="/search/:type/:keyword"
+                component={SearchScreen}
+                exact
+              />
+            </Container>
+          </Switch>
+        </ScrollIntoView>
       </main>
       <Footer />
     </Router>

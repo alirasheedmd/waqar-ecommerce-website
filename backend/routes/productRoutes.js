@@ -10,6 +10,7 @@ import {
   getTopProducts,
   getProductsCategory,
   getFeaturedProducts,
+  getNewProducts,
 } from "../controllers/productControllers.js"
 import { admin, protect } from "../middleware/authMiddleware.js"
 
@@ -17,7 +18,7 @@ router.route("/").get(getProducts).post(protect, admin, createProduct)
 router.route("/:id/review").post(protect, createReview)
 router.route("/topratedproducts").get(getTopProducts)
 router.route("/featuredproducts").get(getFeaturedProducts)
-router.route("/new").get(getFeaturedProducts)
+router.route("/new").get(getNewProducts)
 router.route("/productscategory").get(getProductsCategory)
 router
   .route("/:id")

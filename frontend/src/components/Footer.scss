@@ -1,4 +1,5 @@
 @import "../colors";
+@import "../utils";
 
 #footer {
   .container {
@@ -51,6 +52,9 @@
 
     .subscribe {
       width: 30vw;
+      @include small() {
+        display: none;
+      }
       span {
         color: #fff;
         font-family: $arial;
