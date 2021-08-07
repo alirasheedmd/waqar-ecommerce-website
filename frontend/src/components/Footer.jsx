@@ -23,12 +23,12 @@ const Footer = () => {
           <div className="flex-display direction-col pages">
             <div className="footer-heading">Quick Links</div>
             <div className="link">
-              <Link to="/admin" className="page">
+              <Link to="/" className="page">
                 Home
               </Link>
             </div>
             <div className="link">
-              <Link to="/" className="page">
+              <Link to="/pages/about-us" className="page">
                 About Us
               </Link>
             </div>

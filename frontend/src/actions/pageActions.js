@@ -1,5 +1,8 @@
 import Axios from "axios"
 import {
+  PAGE_DETAIL_FAIL,
+  PAGE_DETAIL_REQUEST,
+  PAGE_DETAIL_SUCCESS,
   PAGE_LIST_FAIL,
   PAGE_LIST_REQUEST,
   PAGE_LIST_SUCCESS,
@@ -30,6 +33,28 @@ export const getAllPages = () => async (dispatch, getState) => {
   } catch (error) {
     dispatch({
       type: PAGE_LIST_FAIL,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    })
+  }
+}
+
+export const getSinglePage = (slug) => async (dispatch) => {
+  try {
+    dispatch({
+      type: PAGE_DETAIL_REQUEST,
+    })
+
+    const { data } = await Axios.get(`/api/pages/${slug}`)
+    dispatch({
+      type: PAGE_DETAIL_SUCCESS,
+      payload: data,
+    })
+  } catch (error) {
+    dispatch({
+      type: PAGE_DETAIL_FAIL,
       payload:
         error.response && error.response.data.message
           ? error.response.data.message

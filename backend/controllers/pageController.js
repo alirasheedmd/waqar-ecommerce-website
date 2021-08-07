@@ -39,4 +39,14 @@ const listPages = asyncHandler(async (req, res) => {
   res.status(200).json(pages)
 })
 
-export { addPage, listPages }
+const getPageById = asyncHandler(async (req, res) => {
+  const page = await Page.find({ slug: req.params.slug })
+  if (page) {
+    res.json(...page)
+  } else {
+    res.status(404)
+    throw new Error("Page not found")
+  }
+})
+
+export { addPage, listPages, getPageById }

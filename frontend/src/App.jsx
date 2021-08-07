@@ -21,6 +21,7 @@ import ProductListScreen from "./screens/ProductListScreen"
 import ProductEditScreen from "./screens/ProductEditScreen"
 import OrderListScreen from "./screens/OrderListScreen"
 import PagesListScreen from "./screens/PagesListScreen"
+import PageScreen from "./screens/PageScreen"
 
 const App = () => {
   return (
@@ -35,6 +36,7 @@ const App = () => {
               <Route path="/register" component={RegisterScreen} exact />
               <Route path="/profile" component={ProfileScreen} />
               <Route path="/product/:id" component={ProductScreen} />
+
               <Route
                 path="/admin/products/:id/edit"
                 component={ProductEditScreen}
@@ -69,6 +71,7 @@ const App = () => {
                 exact
               />
               <Route path="/admin/pages/" component={PagesListScreen} exact />
+              <Route path="/pages/:slug" component={PageScreen} />
             </Container>
           </Switch>
         </ScrollIntoView>
