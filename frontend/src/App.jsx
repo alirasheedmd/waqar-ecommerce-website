@@ -20,6 +20,7 @@ import UserEditScreen from "./screens/UserEditScreen"
 import ProductListScreen from "./screens/ProductListScreen"
 import ProductEditScreen from "./screens/ProductEditScreen"
 import OrderListScreen from "./screens/OrderListScreen"
+import PagesListScreen from "./screens/PagesListScreen"
 
 const App = () => {
   return (
@@ -67,6 +68,7 @@ const App = () => {
                 component={SearchScreen}
                 exact
               />
+              <Route path="/admin/pages/" component={PagesListScreen} exact />
             </Container>
           </Switch>
         </ScrollIntoView>

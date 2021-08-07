@@ -1,5 +1,6 @@
 import asyncHandler from "express-async-handler"
 import Page from "../models/pageModel.js"
+import slugify from "slugify"
 
 //@description Register a new User
 //@route POST /api/users
@@ -18,12 +19,14 @@ const addPage = asyncHandler(async (req, res) => {
   const page = await Page.create({
     title,
     body,
+    slug: slugify(`${title}`).toLowerCase(),
   })
   if (page) {
     res.status(201).json({
       _id: page._id,
       title: page.title,
       body: page.body,
+      slug: page.slug,
     })
   } else {
     res.status(404)
@@ -31,4 +34,9 @@ const addPage = asyncHandler(async (req, res) => {
   }
 })
 
-export default addPage
+const listPages = asyncHandler(async (req, res) => {
+  const pages = await Page.find({})
+  res.status(200).json(pages)
+})
+
+export { addPage, listPages }
