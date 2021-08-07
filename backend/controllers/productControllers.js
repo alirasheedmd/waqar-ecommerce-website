@@ -188,10 +188,29 @@ const getTopProducts = asyncHandler(async (req, res) => {
   const products = await Product.find({}).sort({ rating: -1 }).limit(3)
   res.json(products)
 })
+
+//@description Get Top Rated Products
+//@route GET /api/products/featured
+//@access public
+
 const getFeaturedProducts = asyncHandler(async (req, res) => {
   const products = await Product.find({ isFeatured: true })
   res.json(products)
 })
+
+//@description Get New Arrivals
+//@route GET /api/products/new
+//@access public
+
+const getNewProducts = asyncHandler(async (req, res) => {
+  const products = await Product.find({}).sort({ createdAt: -1 }).limit(8)
+  res.json(products)
+})
+
+//@description Get Unique Categories
+//@route GET /api/products/productscategory/
+//@access public
+
 const getProductsCategory = asyncHandler(async (req, res) => {
   const products = await Product.find({})
   const categoryList = []
@@ -212,4 +231,5 @@ export {
   getTopProducts,
   getProductsCategory,
   getFeaturedProducts,
+  getNewProducts,
 }
