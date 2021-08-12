@@ -6,7 +6,7 @@ import Loader from "../components/Loader"
 import Message from "../components/Message"
 
 const PageScreen = ({ match }) => {
-  const slug = match.params.slug
+  const id = match.params.id
 
   const pageDetail = useSelector((state) => state.pageDetail)
   const { loading, error, page } = pageDetail
@@ -14,8 +14,8 @@ const PageScreen = ({ match }) => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(getSinglePage(slug))
-  }, [dispatch])
+    dispatch(getSinglePage(id))
+  }, [dispatch, id])
 
   return (
     <Container className="full-height">

@@ -1,6 +1,7 @@
 import {
   PAGE_DETAIL_FAIL,
   PAGE_DETAIL_REQUEST,
+  PAGE_DETAIL_RESET,
   PAGE_DETAIL_SUCCESS,
   PAGE_EDIT_FAIL,
   PAGE_EDIT_REQUEST,
@@ -24,10 +25,10 @@ export const pageListReducer = (state = { pages: [] }, action) => {
   }
 }
 
-export const pageDetailReducer = (state = { page: [] }, action) => {
+export const pageDetailReducer = (state = { page: {} }, action) => {
   switch (action.type) {
     case PAGE_DETAIL_REQUEST:
-      return { loading: true }
+      return { loading: true, ...state }
     case PAGE_DETAIL_SUCCESS:
       return { loading: false, page: action.payload } // this will fetch the payload value from the pageAction.js file.
     case PAGE_DETAIL_FAIL:
@@ -37,7 +38,7 @@ export const pageDetailReducer = (state = { page: [] }, action) => {
   }
 }
 
-export const pageUpdateReducer = (state = { page: [] }, action) => {
+export const pageUpdateReducer = (state = { page: {} }, action) => {
   switch (action.type) {
     case PAGE_EDIT_REQUEST:
       return { loading: true }

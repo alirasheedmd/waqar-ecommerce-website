@@ -44,9 +44,9 @@ const listPages = asyncHandler(async (req, res) => {
 })
 
 const getPageById = asyncHandler(async (req, res) => {
-  const page = await Page.find({ slug: req.params.slug })
+  const page = await Page.findById(req.params.id)
   if (page) {
-    res.json(...page)
+    res.status(200).json(page)
   } else {
     res.status(404)
     throw new Error("Page not found")
@@ -65,7 +65,7 @@ const editPageById = asyncHandler(async (req, res) => {
     page.body = req.body.body || page.body
     page.slug = slugify(`${page.title}`).toLowerCase() || page.slug
     const updatedPage = await page.save()
-    res.json(updatedPage)
+    res.status(200).json(updatedPage)
   } else {
     res.status(404)
     throw new Error("Page not found")

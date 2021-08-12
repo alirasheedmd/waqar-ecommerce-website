@@ -6,15 +6,12 @@ import FormContainer from "../components/FormContainer"
 import Message from "../components/Message"
 import Loader from "../components/Loader"
 import { PAGE_EDIT_RESET } from "../constants/pageConstants"
-import { Editor, EditorState } from "draft-js"
+import { getSinglePage, updatePage } from "../actions/pageActions"
 
 const PageEditScreen = ({ match, history }) => {
   const pageId = match.params.id
   const [title, setTitle] = useState("")
   const [body, setBody] = useState("")
-  const [editorState, setEditorState] = useState(() =>
-    EditorState.createEmpty()
-  )
 
   const dispatch = useDispatch()
 
@@ -32,14 +29,14 @@ const PageEditScreen = ({ match, history }) => {
     if (successUpdate) {
       dispatch({ type: PAGE_EDIT_RESET })
     } else {
-      if (!page.title || pageId !== page._id) {
-        dispatch(listProductDetails(productId))
+      if (!page.title || page._id !== pageId) {
+        dispatch(getSinglePage(pageId))
       } else {
         setTitle(page.title)
-        setBody(product.body)
+        setBody(page.body)
       }
     }
-  }, [dispatch, page, pageId, history, successUpdate])
+  }, [dispatch, page, pageId, successUpdate])
 
   const submitHandler = (e) => {
     e.preventDefault()
@@ -47,7 +44,7 @@ const PageEditScreen = ({ match, history }) => {
       title,
       body,
     }
-    dispatch(updatePage(updatedPage, pageId))
+    dispatch(updatePage(pageId, updatedPage))
   }
 
   return (
@@ -66,14 +63,19 @@ const PageEditScreen = ({ match, history }) => {
         ) : (
           <Form onSubmit={submitHandler}>
             <Form.Group controlid="name">
-              <Form.Label>Name</Form.Label>
+              <Form.Label>Title</Form.Label>
               <Form.Control
                 type="text"
                 value={title}
-                onChange={(e) => setName(e.target.value)}
+                onChange={(e) => setTitle(e.target.value)}
               ></Form.Control>
             </Form.Group>
-            <Editor editorState={editorState} onChange={setEditorState} />
+            <Form.Control
+              as="textarea"
+              rows={3}
+              value={body}
+              onChange={(e) => setBody(e.target.value)}
+            />
             <Button type="submit" variant="primary">
               Update
             </Button>

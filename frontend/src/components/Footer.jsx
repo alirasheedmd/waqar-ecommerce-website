@@ -28,17 +28,17 @@ const Footer = () => {
               </Link>
             </div>
             <div className="link">
-              <Link to="/pages/about-us" className="page">
+              <Link to="/pages/61150b40dc594249d4bad720" className="page">
                 About Us
               </Link>
             </div>
             <div className="link">
-              <Link to="/" className="page">
+              <Link to="/terms" className="page">
                 Terms and Condition
               </Link>
             </div>
             <div className="link">
-              <Link to="/" className="page">
+              <Link to="/privacy" className="page">
                 Privacy and Policy
               </Link>
             </div>

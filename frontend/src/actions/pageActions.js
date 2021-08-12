@@ -44,13 +44,13 @@ export const getAllPages = () => async (dispatch, getState) => {
   }
 }
 
-export const getSinglePage = (slug) => async (dispatch) => {
+export const getSinglePage = (id) => async (dispatch) => {
   try {
     dispatch({
       type: PAGE_DETAIL_REQUEST,
     })
 
-    const { data } = await Axios.get(`/api/pages/${slug}`)
+    const { data } = await Axios.get(`/api/pages/${id}`)
     dispatch({
       type: PAGE_DETAIL_SUCCESS,
       payload: data,
@@ -83,7 +83,7 @@ export const updatePage = (id, page) => async (dispatch, getState) => {
       },
     }
 
-    const { data } = await Axios.post(`/api/pages/${id}`, page, config)
+    const { data } = await Axios.put(`/api/pages/${id}`, page, config)
     data &&
       dispatch({
         type: PAGE_EDIT_SUCCESS,
