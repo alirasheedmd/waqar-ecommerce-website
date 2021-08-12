@@ -25,6 +25,7 @@ import PageScreen from "./screens/PageScreen"
 import PageEditScreen from "./screens/PageEditScreen"
 import PrivacyPolicy from "./screens/PrivacyPolicy"
 import TermsScreen from "./screens/TermsScreen"
+import AboutScreen from "./screens/AboutScreen"
 
 const App = () => {
   return (
@@ -73,15 +74,10 @@ const App = () => {
                 component={SearchScreen}
                 exact
               />
-              <Route path="/admin/pages/" component={PagesListScreen} exact />
-              <Route
-                path="/admin/pages/:id/edit"
-                component={PageEditScreen}
-                exact
-              />
               <Route path="/pages/:id" component={PageScreen} />
               <Route path="/privacy" component={PrivacyPolicy} />
               <Route path="/terms" component={TermsScreen} />
+              <Route path="/about" component={AboutScreen} />
             </Container>
           </Switch>
         </ScrollIntoView>
