@@ -19,7 +19,7 @@ const SearchScreen = ({ match }) => {
 
   useEffect(() => {
     dispatch(listProducts(type, keyword, pageNumber)) // this will fireoff the productAction.js (listProduct that will fetch data)
-  }, [dispatch, keyword, pageNumber])
+  }, [dispatch, keyword, pageNumber, type])
 
   return (
     <div className="product-page">

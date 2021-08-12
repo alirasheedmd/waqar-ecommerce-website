@@ -13,7 +13,7 @@ const Features = () => {
         <div className="flex-display features">
           <div className="flex-display item">
             <div className="item-image">
-              <img src={shipping} />
+              <img src={shipping} alt="World Wide Shipping" />
             </div>
             <div className="flex-display direction-col item-text">
               <div className="title">
@@ -26,7 +26,7 @@ const Features = () => {
             </div>
           </div>
           <div className="flex-display item">
-            <img src={quality} />
+            <img src={quality} alt="Best Quality" />
             <div className="flex-display direction-col item-text">
               <div className="title">
                 <h4>Best Quality</h4>
@@ -37,7 +37,7 @@ const Features = () => {
             </div>
           </div>
           <div className="flex-display item">
-            <img src={discount} />
+            <img src={discount} alt="Secure Payment" />
             <div className="flex-display direction-col item-text">
               <div className="title">
                 <h4>Secure Payments</h4>
@@ -48,7 +48,7 @@ const Features = () => {
             </div>
           </div>
           <div className="flex-display item">
-            <img src={secure} />
+            <img src={secure} alt="Discounts" />
             <div className="flex-display direction-col item-text">
               <div className="title">
                 <h4>Discounts</h4>

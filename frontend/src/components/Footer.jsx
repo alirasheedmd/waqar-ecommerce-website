@@ -12,12 +12,16 @@ const Footer = () => {
             <img
               src="https://res.cloudinary.com/magwatt/image/upload/v1628076626/logo_trace-removebg-preview_lnl1ty.png"
               className="logo"
+              alt="logo"
             />
             <div>
               <p>Buy wide range of products from top brands.</p>
             </div>
             <div>
-              <img src="https://res.cloudinary.com/magwatt/image/upload/v1628077291/payment-methods_w37pyh.png" />
+              <img
+                src="https://res.cloudinary.com/magwatt/image/upload/v1628077291/payment-methods_w37pyh.png"
+                alt="payment method"
+              />
             </div>
           </div>
           <div className="flex-display direction-col pages">
