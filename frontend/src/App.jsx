@@ -24,6 +24,7 @@ import PagesListScreen from "./screens/PagesListScreen"
 import PageScreen from "./screens/PageScreen"
 import PageEditScreen from "./screens/PageEditScreen"
 import PrivacyPolicy from "./screens/PrivacyPolicy"
+import TermsScreen from "./screens/TermsScreen"
 
 const App = () => {
   return (
@@ -80,6 +81,7 @@ const App = () => {
               />
               <Route path="/pages/:id" component={PageScreen} />
               <Route path="/privacy" component={PrivacyPolicy} />
+              <Route path="/terms" component={TermsScreen} />
             </Container>
           </Switch>
         </ScrollIntoView>
