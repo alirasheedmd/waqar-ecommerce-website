@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap"
 import { useDispatch, useSelector } from "react-redux"
 import { getSinglePage } from "../actions/pageActions"
 import Loader from "../components/Loader"
+import Message from "../components/Message"
 
 const PageScreen = ({ match }) => {
   const slug = match.params.slug
@@ -18,7 +19,15 @@ const PageScreen = ({ match }) => {
 
   return (
     <Container className="full-height">
-      {loading ? <Loader /> : <h1>{page.title}</h1>}
+      {error && <Message variant="danger">{error}</Message>}
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          <h1>{page.title}</h1>
+          <p>{page.body}</p>
+        </>
+      )}
     </Container>
   )
 }
