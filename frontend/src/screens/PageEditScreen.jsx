@@ -9,10 +9,10 @@ import { listProductDetails, updateProduct } from "../actions/productAction"
 import { PRODUCT_UPDATE_RESET } from "../constants/productContants"
 import axios from "axios"
 
-const ProductEditScreen = ({ match, history }) => {
-  const productId = match.params.id
-  const [name, setName] = useState("")
-  const [description, setDescription] = useState("")
+const PageEditScreen = ({ match, history }) => {
+  const title = match.params.slug
+  const [title, setTitle] = useState("")
+  const [body, setBody] = useState("")
 
   const dispatch = useDispatch()
 
