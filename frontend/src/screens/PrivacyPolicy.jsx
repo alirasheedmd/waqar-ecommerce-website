@@ -2,7 +2,7 @@ import React from "react"
 
 const PrivacyPolicy = () => {
   return (
-    <div>
+    <div className="container section-padding">
       <h1>Privacy and Policy</h1>
       <p>
         <strong>
