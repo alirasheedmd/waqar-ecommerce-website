@@ -39,7 +39,7 @@ const PageEditScreen = ({ match, history }) => {
         setBody(product.body)
       }
     }
-  }, [dispatch, product, productId, history, successUpdate])
+  }, [dispatch, page, pageId, history, successUpdate])
 
   const submitHandler = (e) => {
     e.preventDefault()
