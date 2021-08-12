@@ -47,18 +47,11 @@ const Footer = () => {
             <div className="footer-heading">Contact</div>
             <div className="contact-body">
               <p>
-                DIM Store
+                DIM Store santa fe NM USA
                 <br />
-                Suit A504
+                Email: waqar.ahmed@dimsstore.com
                 <br />
-                Saima Drive Inn <br />
-                Gulshan-e-Iqbal
-                <br />
-                Karachi <br />
-                Pakistan <br />
-                Phone: <br />
-                Email: <br />
-                Website: <br />
+                Website: https://www.dimsstore.com/ <br />
               </p>
             </div>
             <div></div>

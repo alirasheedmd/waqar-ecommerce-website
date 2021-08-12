@@ -1,5 +1,5 @@
 import React from "react"
-import { Button, Col, Container, Image, Row } from "react-bootstrap"
+import { Col, Image, Row } from "react-bootstrap"
 import { Link } from "react-router-dom"
 import "./Category.scss"
 
@@ -35,7 +35,9 @@ const Category = () => {
                     <div className="card-items-wrapper flex-display jcc direction-col">
                       <div className="card-text-wrap">
                         <h5 className="card-text-wrap-pitch">Shop</h5>
-                        <h1 className="card-text-wrap-title">Kitchen Ware</h1>
+                        <h1 className="card-text-wrap-title">
+                          Kitchen and Dining
+                        </h1>
                       </div>
 
                       <Image
@@ -71,16 +73,16 @@ const Category = () => {
         <Col xs={12} md={3} className="aside">
           <div className="aside-wrapper">
             <div className="category-card-wrapper">
-              <Link to={`/search/category/Mobile`} className="link">
+              <Link to={`/search/category/outdoor`} className="link">
                 <div className="category-card-7">
                   <div className="card-items-wrapper flex-display jcc direction-col">
                     <div className="card-text-wrap">
                       <h5 className="card-text-wrap-pitch">Shop</h5>
-                      <h1 className="card-text-wrap-title">Mobile Phones</h1>
+                      <h1 className="card-text-wrap-title">Outdoor</h1>
                     </div>
 
                     <Image
-                      src="https://res.cloudinary.com/magwatt/image/upload/v1628155106/Main-Layers-Dont-Need-To-Open_eksmcs.png"
+                      src="https://res.cloudinary.com/magwatt/image/upload/v1628756013/Screen_Shot_2021-08-12_at_1.10_yidrva.png"
                       className="card-image"
                     />
                   </div>
@@ -93,11 +95,11 @@ const Category = () => {
                   <div className="card-items-wrapper flex-display jcc direction-col">
                     <div className="card-text-wrap">
                       <h5 className="card-text-wrap-pitch">Shop</h5>
-                      <h1 className="card-text-wrap-title">Furniture</h1>
+                      <h1 className="card-text-wrap-title">Baby Toys</h1>
                     </div>
 
                     <Image
-                      src="https://res.cloudinary.com/magwatt/image/upload/v1628155106/Group-1319_ype3xm.png"
+                      src="https://res.cloudinary.com/magwatt/image/upload/v1628760283/4efdf0d377180a1553eeaaf548eab043_xoubuv.png"
                       className="card-image"
                     />
                   </div>
