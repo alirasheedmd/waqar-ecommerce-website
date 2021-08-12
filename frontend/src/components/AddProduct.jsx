@@ -77,9 +77,6 @@ const AddProduct = ({ match, history }) => {
 
   return (
     <>
-      <Link to="/admin/productlist" className="btn btn-light my-3">
-        Go Back
-      </Link>
       <FormContainer>
         <h1>Create Product</h1>
         <Form onSubmit={submitHandler}>

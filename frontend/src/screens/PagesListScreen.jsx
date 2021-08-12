@@ -4,8 +4,9 @@ import { Button, Table, Row, Col, Container } from "react-bootstrap"
 import Loader from "../components/Loader"
 import { LinkContainer } from "react-router-bootstrap"
 import { getAllPages } from "../actions/pageActions"
+import Message from "../components/Message"
 
-const PagesListScreen = ({ history, match }) => {
+const PagesListScreen = () => {
   const pageList = useSelector((state) => state.pageList)
   const { loading, error, pages } = pageList
 
@@ -26,6 +27,7 @@ const PagesListScreen = ({ history, match }) => {
             <Button variant="secondary">Add Page</Button>
           </Col>
         </Row>
+        {error && <Message />}
         {loading ? (
           <Loader />
         ) : (
