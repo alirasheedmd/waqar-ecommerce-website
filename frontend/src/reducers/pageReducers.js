@@ -37,7 +37,7 @@ export const pageDetailReducer = (state = { page: [] }, action) => {
   }
 }
 
-export const pageEditReducer = (state = { page: [] }, action) => {
+export const pageUpdateReducer = (state = { page: [] }, action) => {
   switch (action.type) {
     case PAGE_EDIT_REQUEST:
       return { loading: true }

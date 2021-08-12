@@ -33,8 +33,8 @@ import {
 } from "./reducers/orderReducers"
 import {
   pageDetailReducer,
-  pageEditReducer,
   pageListReducer,
+  pageUpdateReducer,
 } from "./reducers/pageReducers"
 
 const reducer = combineReducers({
@@ -64,7 +64,7 @@ const reducer = combineReducers({
   userUpdate: userUpdateReducer,
   pageList: pageListReducer,
   pageDetail: pageDetailReducer,
-  pageEdit: pageEditReducer,
+  pageUpdate: pageUpdateReducer,
 })
 
 const cartItemsFromStorage = localStorage.getItem("cartItems")

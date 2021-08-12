@@ -66,7 +66,7 @@ export const getSinglePage = (slug) => async (dispatch) => {
   }
 }
 
-export const editSinglePage = (id, page) => async (dispatch, getState) => {
+export const updatePage = (id, page) => async (dispatch, getState) => {
   try {
     dispatch({
       type: PAGE_EDIT_REQUEST,
