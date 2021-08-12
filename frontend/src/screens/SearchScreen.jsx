@@ -1,14 +1,12 @@
 import React, { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux" // useSelector will display the products on the screen
 import Product from "../components/Product"
-import { Row, Col, Container, Image } from "react-bootstrap"
+import { Row, Col } from "react-bootstrap"
 import { listProducts } from "../actions/productAction"
 import Message from "../components/Message"
 import Loader from "../components/Loader"
 import Paginate from "../components/Paginate"
-import ProductCarousel from "../components/ProductCarousel"
 import Meta from "../components/Meta"
-import { Link } from "react-router-dom"
 
 const SearchScreen = ({ match }) => {
   const pageNumber = match.params.pageNumber || 1
