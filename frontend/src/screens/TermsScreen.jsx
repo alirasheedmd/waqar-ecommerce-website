@@ -2,7 +2,7 @@ import React from "react"
 
 const TermsScreen = () => {
   return (
-    <div>
+    <div className="container section-padding">
       <h1>Term and Condition</h1>
       <p>
         <strong>
