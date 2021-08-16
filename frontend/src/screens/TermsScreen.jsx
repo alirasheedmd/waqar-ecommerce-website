@@ -11,7 +11,7 @@ const TermsScreen = () => {
       </p>
       <p>
         The following Terms and Conditions govern and apply to your use of or
-        reliance upon this website maintained by DIMS LTD. (the “website”). Your
+        reliance upon this website maintained by DIMS LLC. (the “website”). Your
         access or use of the website indicates that you have read, understand
         and agree to be bound by these terms and conditions and any other
         applicable laws, statutes and/or regulations. we may change these terms
@@ -28,8 +28,8 @@ const TermsScreen = () => {
         registered and/or licensed by us. All content on the Website, including
         but not limited to text, software, code, designs, graphics, photos,
         sounds, music, videos, applications, interactive features and all other
-        content is a collective work under Canadian and other copyright laws and
-        is the proprietary property of the Company; All rights reserved.
+        content is a collective work under other copyright laws and is the
+        proprietary property of the Company; All rights reserved.
       </p>
       <p>
         <strong>2. USE OF COMPANY MATERIALS</strong>
@@ -154,7 +154,7 @@ const TermsScreen = () => {
         For any Questions, Concerns, Or Disputes, You Agree to contact us in a
         timely manner at the following:
         <br />
-        info@DIMS.co.uk
+        dimsstore.com
       </h5>
       <p>
         <strong>7. AFFILIATE MARKETING &amp; ADVERTISING</strong>
@@ -173,7 +173,7 @@ const TermsScreen = () => {
         You agree not to use the Website for any unlawful purpose, or any
         purpose prohibited under this clause. You agree not to use the Website
         in any way that could damage the Website, the services or the general
-        business of DIMS LTD.
+        business of DIMS LLC.
       </p>
       <p>You further agree not to use and/or access the website:</p>
       <p>
@@ -259,7 +259,7 @@ const TermsScreen = () => {
           12. INDEMNIFICATION
           <br />
         </b>
-        You defend and indemnify DIMS LTD., and any of its affiliates and hold
+        You defend and indemnify DIMS LLC., and any of its affiliates and hold
         us harmless against any and all legal claims and demands, including
         reasonable attorney’s fees, which may arise from or relate to your use
         or misuse of the Website, your br/each of these Terms and Conditions, or
@@ -341,11 +341,11 @@ const TermsScreen = () => {
         We are not liable for any damages that may occur to you as a result of
         your use of the Website, to the fullest extent permitted by law. The
         maximum liability of arising from your use of the Website is limited to
-        the greater of one hundred (£100) GBP or the amount you paid to DIMS
-        LTD. in the last six (6) months. This applies to any and all claims by
-        you, including, but not limited to, lost profits or revenues,
-        consequential or punitive damages, negligence, strict liability, fraud,
-        or torts of any kind.
+        the greater of one hundred ($100) or the amount you paid to DIMS LLC. in
+        the last six (6) months. This applies to any and all claims by you,
+        including, but not limited to, lost profits or revenues, consequential
+        or punitive damages, negligence, strict liability, fraud, or torts of
+        any kind.
       </p>
     </div>
   )

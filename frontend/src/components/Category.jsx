@@ -78,7 +78,9 @@ const Category = () => {
                   <div className="card-items-wrapper flex-display jcc direction-col">
                     <div className="card-text-wrap">
                       <h5 className="card-text-wrap-pitch">Shop</h5>
-                      <h1 className="card-text-wrap-title">Outdoor</h1>
+                      <h1 className="card-text-wrap-title">
+                        Garden <br /> and Outdoor
+                      </h1>
                     </div>
 
                     <Image
@@ -95,7 +97,7 @@ const Category = () => {
                   <div className="card-items-wrapper flex-display jcc direction-col">
                     <div className="card-text-wrap">
                       <h5 className="card-text-wrap-pitch">Shop</h5>
-                      <h1 className="card-text-wrap-title">Baby Toys</h1>
+                      <h1 className="card-text-wrap-title">Baby</h1>
                     </div>
 
                     <Image
