@@ -194,7 +194,7 @@ const getTopProducts = asyncHandler(async (req, res) => {
 //@access public
 
 const getFeaturedProducts = asyncHandler(async (req, res) => {
-  const products = await Product.find({ isFeatured: true })
+  const products = await Product.find({ isFeatured: true }).limit(8)
   res.json(products)
 })
 
