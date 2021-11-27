@@ -49,6 +49,10 @@ const App = () => {
                 path="/search/:keyword/page/:pageNumber"
                 component={SearchScreen}
               />
+              <Route
+                path="/search/category/:keyword/page/:pageNumber"
+                component={SearchScreen}
+              />
               <Route path="/shipping" component={ShippingScreen} />
               <Route path="/payment" component={PaymentScreen} />
               <Route path="/placeorder" component={PlaceOrderScreen} />

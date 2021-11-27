@@ -55,7 +55,7 @@ const Footer = () => {
                 <br />
                 Santa fe NM USA
                 <br />
-                Email: waqar.ahmed@dimsstore.com
+                Email: grant.alex@dimsstore.com
                 <br />
                 Website: https://www.dimsstore.com/ <br />
               </p>
